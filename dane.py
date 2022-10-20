@@ -42,3 +42,12 @@ print(oceny)
 oceny.reverse()
 print(oceny)
 # oceny.clear()
+oceny2 = ['dostateczny', 'mierny']
+oceny3 = oceny2 + oceny
+# oceny2.extend(oceny)
+print(oceny3)
+
+numery = [2, 3, 5]
+cyfry = numery.copy()
+numery = [2, 33, 5]
+print(cyfry)
