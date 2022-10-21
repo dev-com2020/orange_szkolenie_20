@@ -27,13 +27,8 @@ def podziel():
     pass
 
 
-def suma(*args):
-    lista = []
-    while True:
-        wejscie = input()
-        if wejscie == "stop":
-            break
-        lista.append(int(wejscie))
+def suma(*param):
+    print(param)
     print("Suma podanych parametrów to:", sum(lista))
 
 
@@ -59,7 +54,13 @@ while True:
     elif w == "5":
         break
     elif w == "t":
-        suma()
-
+        lista = []
+        while True:
+            wejscie = input()
+            if wejscie == "stop":
+                break
+            lista.append(int(wejscie))
+            for i in lista:
+                suma(i)
     else:
         print("Nie ma takiej opcji, spróbuj ponownie")
