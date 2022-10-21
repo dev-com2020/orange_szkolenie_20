@@ -1,16 +1,31 @@
+import random
+
+a = random.randint(1, 100)
+b = random.randint(1, 100)
+x = int(input("Podaj liczbę x: "))
+
 def dodaj():
-    a = 2
-    b = 5
-    print("Suma=", a + b)
+    global b
+    a = int(input("Podaj a "))
+    b = int(input("Podaj b "))
+    print("Suma =", a + b)
 
-def odejmij():
-    pass
 
-def pomnoz():
-    pass
+def odejmij(a, b):
+    print(f"Liczba a={a}, liczba b={b}")
+    print("Wynik odejmowania =", a - b)
+
+
+
+def pomnoz(a,x=1):
+    # x = 1000
+    print(f"Liczba a={a}, liczba x={x}")
+    print("Wynik mnożeniea =", a * x)
+
 
 def podziel():
     pass
+
 
 while True:
     print('''
@@ -25,9 +40,9 @@ while True:
     if w == "1":
         dodaj()
     elif w == "2":
-        odejmij()
+        odejmij(a,b)
     elif w == "3":
-        pomnoz()
+        pomnoz(a,x)
     elif w == "4":
         podziel()
     elif w == "5":
