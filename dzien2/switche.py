@@ -10,7 +10,7 @@ def switch(lang):
     elif lang == "Java":
         return "You can become a mobile app developer"
     else:
-        print("Jeszcze nie wiadomo...")
+        return ("Jeszcze nie wiadomo...")
 
 
 lang = input("Jakiego języka chcesz się uczyć?")
