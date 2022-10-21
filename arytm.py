@@ -1,7 +1,6 @@
-
+import datetime
+from datetime import datetime as dt
 import time
-from datetime import datetime
-
 import pytz
 
 suma = 1 + 2 * 3 / 4 ** 2
@@ -18,22 +17,26 @@ rok = 2022
 miesiac = 10
 dzien = 21
 
-# data = datetime.datetime(rok, miesiac, dzien, 10, 00, 00)
-# print(data)
-# seconds = time.time()
-# local = time.ctime(seconds)
-# print("Sekundy:", seconds)
-# # time.sleep(5)
-# print("Czas lokalny:", local)
-#
-# time_str = time.strftime("%d %m %Y\n%H:%M:%S")
-# print(time_str)
-#
+data = datetime.datetime(rok, miesiac, dzien, 10, 00, 00)
+print(data)
+seconds = time.time()
+local = time.ctime(seconds)
+print("Sekundy:", seconds)
+# time.sleep(5)
+print("Czas lokalny:", local)
+
+time_str = time.strftime("%d %m %Y\n%H:%M:%S")
+print(time_str)
+
 
 tz_NY = pytz.timezone('America/New_York')
-datetime_NY = datetime.now(tz_NY)
+datetime_NY = dt.now(tz_NY)
 print("NY time:", datetime_NY.strftime("%H:%M:%S"))
 
 tz_London = pytz.timezone('Europe/London')
-datetime_London = datetime.now(tz_London)
+datetime_London = dt.now(tz_London)
 print("London time:", datetime_London.strftime("%H:%M:%S"))
+
+tz_Warsaw = pytz.timezone('Europe/Warsaw')
+datetime_Waw = dt.now(tz_Warsaw)
+print("Warsaw time:", datetime_Waw.strftime("%H:%M:%S"))
