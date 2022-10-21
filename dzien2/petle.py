@@ -35,11 +35,22 @@ ilosc = random.randint(3, 8)
 for i in range(ilosc):
     lista.append(random.randint(1, 10))
 
-for i in lista:
-    print(f"elementy w liście:{i}")
+# for i in lista:
+#     print(f"elementy w liście:{i}")
 
-slownik = {"imie": "Marek", "nazwisko": "Kowalski", "plec": "mezczyzna"}
+krotka = ()
 
-for k, w in slownik.items():
-    print(k)
-    print(w)
+for i, w in enumerate(lista):
+    print(f"indeks:{i}, element w liście:{w}")
+    if w == 10:
+        print("Znalazłem 10!!!")
+        krotka += w,
+        liczba1 = krotka[0]
+        print("Dodajemy +5 do pierwszego indeksu krotki:", liczba1 + 5)
+
+# slownik = {"imie": "Marek", "nazwisko": "Kowalski", "plec": "mezczyzna"}
+#
+# for k, w in slownik.items():
+#     print(k)
+#     print(w)
+#
