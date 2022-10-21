@@ -29,7 +29,7 @@ def podziel():
 
 def suma(*param):
     print(param)
-    print("Suma podanych parametrów to:", sum(lista))
+
 
 
 while True:
@@ -62,5 +62,6 @@ while True:
             lista.append(int(wejscie))
             for i in lista:
                 suma(i)
+        print("Suma podanych parametrów to:", sum(lista))
     else:
         print("Nie ma takiej opcji, spróbuj ponownie")
