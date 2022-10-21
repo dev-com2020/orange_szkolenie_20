@@ -13,7 +13,8 @@ else:
     print(f"masz {age} lat")
     lista.append(age)
 
-print(f"Zawartość listy: {lista}")
+lista.append(name)
+print(f"Poza instrukcją, Zawartość listy: {lista}")
 
 # temp = int(input("Podaj temperaturę "))
 # minuta = int(input("Podaj minutę "))
