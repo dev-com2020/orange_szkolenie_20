@@ -1,15 +1,45 @@
-print("MENU:")
-warunek = input("Wpisz 't' aby rozpocząć liczenie premii,")
+# print("MENU:")
+# warunek = input("Wpisz 't' aby rozpocząć liczenie premii,")
+#
+# while warunek == 't':
+#     sales = float(input("podaj wielkość sprzedaży: "))
+#     rate = float(input("podaj wysokość premii: "))
+#
+#     wynik = sales * rate
+#
+#     print("-" * 20)
+#     print("Premia wynosi:", format(wynik, '.2f'), ' zł', sep=' ✅ ')
+#     print("-" * 20)
+#     warunek = input("Czy chesz obliczyć kolejną premię?(t lub n): ")
+#
+# print("To jest poza pętlą!!!")
 
-while warunek == 't':
-    sales = float(input("podaj wielkość sprzedaży: "))
-    rate = float(input("podaj wysokość premii: "))
 
-    wynik = sales * rate
+# licznik = 99
+# while True:
+#     licznik -= 1  # licznik = licznik + 1
+#     print(licznik)
+#     if licznik == 5:
+#         break
+#
+#
+# wybor = int(input("Ile razy mam wykonać ksero?"))
+# for ksero in range(wybor):
+#     print(ksero+1)
+#     print("Robię ksero...")
 
-    print("-" * 20)
-    print("Premia wynosi:", format(wynik, '.2f'), ' zł', sep=' ✅ ')
-    print("-" * 20)
-    warunek = input("Czy chesz obliczyć kolejną premię?(t lub n): ")
+import random
 
-print("To jest poza pętlą!!!")
+lista = []
+ilosc = random.randint(3, 8)
+for i in range(ilosc):
+    lista.append(random.randint(1, 10))
+
+for i in lista:
+    print(f"elementy w liście:{i}")
+
+slownik = {"imie": "Marek", "nazwisko": "Kowalski", "plec": "mezczyzna"}
+
+for k, w in slownik.items():
+    print(k)
+    print(w)
