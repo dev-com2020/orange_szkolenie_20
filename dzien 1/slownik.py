@@ -1,14 +1,14 @@
 slownik = {1: "Tomek",
-           "wiek": 39,
+           "__wiek": 39,
            "hobby": ['programowanie', 'jedzenie']}
 
 print(slownik.keys())
 print(slownik['hobby'][0])
 print(slownik.values())
 print(slownik.items())
-slownik["wiek"] = 40
+slownik["__wiek"] = 40
 slownik["znakZ"] = "Ryby"
-# slownik.pop('wiek')
+# slownik.pop('__wiek')
 print(slownik.get("znakZ"))
 # print(slownik)
 # del slownik[1]

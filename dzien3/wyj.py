@@ -49,7 +49,7 @@ def check_age2(users, age):
         except KeyError:
             print("Niepoprawne klucze: {}".format(user))
         except ValueError:
-            print("Niepoprawny wiek: {}".format(user))
+            print("Niepoprawny __wiek: {}".format(user))
     return count
 
 
@@ -74,7 +74,7 @@ def check_age4(users, age):
         except KeyError:
             print("Niepoprawne klucze: {}".format(user))
         except ValueError:
-            print("Niepoprawny wiek: {}".format(user))
+            print("Niepoprawny __wiek: {}".format(user))
         else:
             count += 1 if user_age < age else 0
         finally:
