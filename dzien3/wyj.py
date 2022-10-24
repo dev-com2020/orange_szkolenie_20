@@ -19,7 +19,13 @@ def mnozenie(a, b):
         print("Elementy:", lista)
 
 
-invalid_age = [{'name': 'Jan', 'age': 'age'}, {'name': 'Dawid', 'age': '25'}, {'name': 'Marcin', 'age': '23'}]
+invalid_age = [{'name': 'Jan', 'age': 'age'},
+               {'name': 'Dawid', 'age': '25'},
+               {'name': 'Marcin', 'age': '23'}]
+valid_age = [{'name': 'Jan', 'age': '10'},
+             {'name': 'Dawid', 'age': '9'},
+             {'name': 'Marcin', 'age': '23'}]
+
 
 def check_age(users, age):
     count = 0
@@ -43,7 +49,7 @@ def check_age2(users, age):
         except KeyError:
             print("Niepoprawne klucze: {}".format(user))
         except ValueError:
-            print("Niepoprawne wiek: {}".format(user))
+            print("Niepoprawny wiek: {}".format(user))
     return count
 
 
@@ -58,8 +64,25 @@ def check_age3(users, age):
     return count
 
 
+def check_age4(users, age):
+    count = 0
+    for i, user in enumerate(users):
+        try:
+            user_age = int(user['age'])
+        except TypeError:
+            print("Niepoprawne dane: {}".format(user))
+        except KeyError:
+            print("Niepoprawne klucze: {}".format(user))
+        except ValueError:
+            print("Niepoprawny wiek: {}".format(user))
+        else:
+            count += 1 if user_age < age else 0
+        finally:
+            print("{} --> {}".format(i, user))
+    return count
 
 
+print(check_age4(invalid_age, 11))
 
 # mnozenie(5, 5)
 # print(mnozenie(5, 0))
